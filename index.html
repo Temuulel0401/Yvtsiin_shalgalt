@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Манай ургийн түүх</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <nav class="nav">
+    <a href="#tree">Ургийн мод</a><a href="#people">Гишүүд</a><a href="#timeline">Он цаг</a><a href="#stories">Түүх</a><a href="#stats-sec">Тоон мэдээлэл</a>
+    <button id="theme" class="ico" aria-label="Харанхуй горим">◐</button><button id="print" class="ico" aria-label="Хэвлэх">⎙</button>
+    <input id="q" type="search" placeholder="Нэрээр хайх…" aria-label="Хайх">
+  </nav>
+  <div class="hero-body">
+    <p class="kicker">Дөрвөн үеийн түүх</p>
+    <h1>Манай <em>угсаа</em></h1>
+    <p class="lead">Өвөөгийн аав, ээжээс эхэлж өвөө, аав, миний үе хүртэл салбарласан угсааны түүх.</p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<main>
+  <section id="tree" class="wrap">
+    <h2>Ургийн мод</h2>
+    <p class="sub">Мод өргөн тул хөндлөн гүйлгэнэ. Хүн дээр дарж дэлгэрэнгүй мэдээллийг үзнэ.</p>
+    <div class="tree-scroll"><div class="tree" id="treeRoot"></div></div>
+  </section>
+
+  <section id="people" class="wrap">
+    <div class="tabs" id="tabs"></div>
+    <div id="groups"></div>
+    <p class="empty" id="empty" hidden>Хайлтад тохирох хүн олдсонгүй. Өөр нэр оруулна уу.</p>
+  </section>
+</main>
+
+<section id="timeline" class="wrap"><h2>Он цагийн хэлхээс</h2><p class="sub">Төрсөн, гэр бүл болсон, дурсагдах үйл явдлууд.</p>
+  <div class="tl-filter" id="tlf"></div><ol class="tl" id="tl"></ol></section>
+<section id="stories" class="wrap"><h2>Өв уламжлал ба түүх</h2><p class="sub">Манай угсааны онцлог, дурсамж, зарчим.</p><div class="stories" id="st"></div></section>
+<section id="stats-sec" class="wrap"><h2>Тоон мэдээлэл</h2><p class="sub">Угсааны бүтэц нэг дор.</p><div class="panels" id="panels"></div></section>
+<footer>Хайртай хүмүүсийнхээ түүхийг хадгалъя.</footer>
+
+<dialog id="modal">
+  <button class="close" id="close" aria-label="Хаах">×</button>
+  <div id="modalBody"></div>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
